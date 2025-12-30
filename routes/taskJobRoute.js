@@ -1,7 +1,5 @@
-import { createJob } from "../controllers/TaskJobController.js";
-import { getJobs } from "../controllers/TaskJobController.js";
-import { updateTask } from "../controllers/TaskJobController.js";
-import { deleteTask } from "../controllers/TaskJobController.js";
+import { updateTask,deleteTask,getJobs,createJob  } from "../controllers/taskJobController.js";
+
 
 import express from 'express'
 
