@@ -6,7 +6,7 @@ import userRoutes from './routes/userRoute.js'
 import  taskJobRoute  from './routes/taskJobRoute.js'
 dotenv.config();
 const app = express();
-const allowedOrigins = ["http://localhost:5000" ,"https://ke-backend.vercel.app" ];
+const allowedOrigins = ["https://ke-backend.vercel.app" ];
 
 app.use(
   cors({
@@ -24,7 +24,7 @@ app.use(
 
 
 app.use(express.json());
-const port = process.env.PORT || 4000
+const port = process.env.PORT
 
 connectDB()
 app.use("/api", userRoutes);
