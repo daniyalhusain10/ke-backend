@@ -8,31 +8,15 @@ import taskJobRoute from './routes/taskJobRoute.js';
 dotenv.config();
 const app = express();
 
+const allowedOrigin = "https://ke-backend.vercel.app";
+
 app.use(
   cors({
-    origin: (origin, callback) => {
-      // origin undefined ho sakta hai (Postman / curl / local files)
-      if (!origin) {
-        callback(null, true); // allow
-      } else {
-        // only allow specific frontend origins
-        const allowedOrigins = [
-          "https://ke-backend.vercel.app",
-          "http://localhost:3000"
-        ];
-        if (allowedOrigins.includes(origin)) {
-          callback(null, true);
-        } else {
-          console.log("Blocked CORS:", origin);
-          callback(new Error("Not allowed by CORS"));
-        }
-      }
-    },
+    origin: allowedOrigin,
     credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"]
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   })
 );
-
 
 // Body parser
 app.use(express.json());
