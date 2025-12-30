@@ -6,7 +6,7 @@ import userRoutes from './routes/userRoute.js'
 import  taskJobRoute  from './routes/taskJobRoute.js'
 dotenv.config();
 const app = express();
-const allowedOrigins = ["http://localhost:5000" ,"https://ke-backend.vercel.app/" ];
+const allowedOrigins = ["http://localhost:5000" ,"https://ke-backend.vercel.app" ];
 
 app.use(
   cors({
