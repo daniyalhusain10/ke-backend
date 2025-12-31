@@ -31,9 +31,12 @@ const jobSchema = new mongoose.Schema({
         type: String,
         trim: true
     },
+     shift:{
+      type:String,
+      default:0
+    },
     inputField5: {
         type: String,
-        trim: true
     },
      inputField6: {
         type: String,
