@@ -15,6 +15,7 @@ export const createJob = async (req, res) => {
         inputField7, 
         fitterName, 
         workCategory,
+        shift,
         status,
         kkName,
     } = req.body;
